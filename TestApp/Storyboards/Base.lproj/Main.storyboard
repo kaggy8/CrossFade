@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ivn-AN-AYz">
+                                <rect key="frame" x="14" y="608" width="386" height="36"/>
+                                <imageReference key="minimumValueImage" image="2.circle" catalog="system" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                                <imageReference key="maximumValueImage" image="10.circle" catalog="system" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVh-QI-8QT">
+                                <rect key="frame" x="16" y="118" width="382" height="450"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnl-Qr-xV6">
+                                <rect key="frame" x="16" y="60" width="382" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pJJ-ai-Ir5">
+                                <rect key="frame" x="30" y="762" width="354" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYj-4B-FUR">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" title=""/>
+                                        <connections>
+                                            <action selector="addAudioFileOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="try-qI-QQ5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sq8-a2-csG">
+                                        <rect key="frame" x="298" y="0.0" width="56" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus"/>
+                                        <connections>
+                                            <action selector="addAudioFileSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hpj-6c-KzK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrC-MS-tae">
+                                <rect key="frame" x="163" y="683" width="88" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="play" symbolScale="large" renderingMode="original"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cg1-Nm-zzJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.10980392156862745" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pJJ-ai-Ir5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0345982" id="2al-MA-LVR"/>
+                            <constraint firstItem="lnl-Qr-xV6" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0535714" id="3T3-AU-N9r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YVh-QI-8QT" secondAttribute="trailing" constant="16" id="6q1-Mf-d36"/>
+                            <constraint firstItem="Ivn-AN-AYz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7ik-NY-jp3"/>
+                            <constraint firstItem="UrC-MS-tae" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="81W-Ad-INN"/>
+                            <constraint firstItem="YVh-QI-8QT" firstAttribute="top" secondItem="lnl-Qr-xV6" secondAttribute="bottom" constant="10" id="9eV-sD-C9V"/>
+                            <constraint firstItem="pJJ-ai-Ir5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A4S-4V-7dQ"/>
+                            <constraint firstItem="pJJ-ai-Ir5" firstAttribute="top" secondItem="UrC-MS-tae" secondAttribute="bottom" constant="15" id="AAL-Zk-ZvL"/>
+                            <constraint firstItem="lnl-Qr-xV6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="JJe-Qt-Y4t"/>
+                            <constraint firstItem="Ivn-AN-AYz" firstAttribute="top" secondItem="YVh-QI-8QT" secondAttribute="bottom" constant="40" id="JNl-y8-a74"/>
+                            <constraint firstItem="Ivn-AN-AYz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0390625" id="NHY-ul-Lf2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pJJ-ai-Ir5" secondAttribute="trailing" constant="30" id="TsU-7w-oLB"/>
+                            <constraint firstItem="Ivn-AN-AYz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VBc-DH-nXk"/>
+                            <constraint firstItem="YVh-QI-8QT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YaP-Yb-4Lx"/>
+                            <constraint firstItem="lnl-Qr-xV6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aTY-bp-VPo"/>
+                            <constraint firstItem="UrC-MS-tae" firstAttribute="top" secondItem="Ivn-AN-AYz" secondAttribute="bottom" constant="40" id="faJ-Q1-SXU"/>
+                            <constraint firstItem="lnl-Qr-xV6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kuq-LG-NcM"/>
+                            <constraint firstItem="pJJ-ai-Ir5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="mZ2-ru-wNa"/>
+                            <constraint firstItem="UrC-MS-tae" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0714286" id="owb-Um-BnK"/>
+                            <constraint firstItem="YVh-QI-8QT" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.502232" id="rOo-Is-cS9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addFileButtonOne" destination="JYj-4B-FUR" id="VFD-ge-OL0"/>
+                        <outlet property="addFileButtonTwo" destination="sq8-a2-csG" id="awI-mK-BL5"/>
+                        <outlet property="nameAudioFiles" destination="lnl-Qr-xV6" id="Uxd-wT-YPd"/>
+                        <outlet property="playButton" destination="UrC-MS-tae" id="b3U-Sn-pBg"/>
+                        <outlet property="valueCrossfade" destination="Ivn-AN-AYz" id="ah5-XX-yL2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="10.circle" catalog="system" width="128" height="121"/>
+        <image name="2.circle" catalog="system" width="128" height="121"/>
+        <image name="play" width="64" height="64"/>
+        <image name="plus" width="32" height="32"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
