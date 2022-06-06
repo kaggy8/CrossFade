@@ -23,6 +23,13 @@ class MainViewController: UIViewController {
     private var url = [URL]()
     private let audioPlay = AudioPlay()
     
+    // MARK: - Life Cycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -39,10 +46,15 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func playAudio(_ sender: UIButton) {
-            audioPlay.play(url)
+        audioPlay.play(url)
+        playButton.setImage(UIImage(named: "stop"), for: .normal)
     }
 }
+
+// MARK: - UIDocumentPicker
+
 extension MainViewController: UIDocumentPickerDelegate {
+    
     func selectFile() {
         let documentPickerController = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.audio])
         documentPickerController.delegate = self

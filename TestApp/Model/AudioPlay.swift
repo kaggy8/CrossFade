@@ -8,19 +8,25 @@
 import Foundation
 import AVFoundation
 
+
 class AudioPlay {
-    private let queuePlayer = AVQueuePlayer()
-    private var fadeTimer: Timer?
     
-    func play(_ urls: [URL], time: Float) {
+    private let queuePlayer = AVQueuePlayer()
+    private var token: NSKeyValueObservation?
+    
+    func play(_ urls: [URL]) {
         for url in urls {
             let item = AVPlayerItem(url: url)
-            
             queuePlayer.insert(item, after: queuePlayer.items().last)
         }
         
-        queuePlayer.volume = 0
+        queuePlayer.volume = 1
         queuePlayer.play()
+        token = queuePlayer.observe(\.currentItem) { [weak self] queuePlayer, _ in
+            if queuePlayer.items().count == 1 {
+                self?.play(urls)
+            }
+        }
     }
     
     func stop() {
