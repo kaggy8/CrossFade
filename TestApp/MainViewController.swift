@@ -46,8 +46,18 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func playAudio(_ sender: UIButton) {
-        audioPlay.play(url, Double(valueCrossfade.value))
-        playButton.setImage(UIImage(named: "stop"), for: .normal)
+        switch index {
+        case 0:
+            audioPlay.play(url, Double(valueCrossfade.value))
+            playButton.setImage(UIImage(named: "stop"), for: .normal)
+            index = 1
+        case 1:
+            audioPlay.stop()
+            playButton.setImage(UIImage(named: "play"), for: .normal)
+            index = 0
+        default:
+            break
+        }
     }
 }
 
